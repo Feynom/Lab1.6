@@ -21,7 +21,8 @@ public:
 		void Read();
 		void Display();
 
-		string toString() const;
+		string toString_pair() const;
+		
 	};
 
 
@@ -32,8 +33,9 @@ public:
 	void Read();
 	string toString() const;
 
-	void ComparePairs(Pair p1, Pair p2);
+	int ComparePairs(Pair p1, Pair p2) const;
+	void ComparePairsResult(int result);
 
 private:
-	Pair p;
+	Fraction::Pair p;
 };

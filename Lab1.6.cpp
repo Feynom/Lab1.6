@@ -3,8 +3,10 @@
 
 int main()
 {
-    Fraction::Pair a, b, c, d;
+    Fraction::Pair a, b, c;
     Fraction f;
+    f.SetP(0, 0);
+    int result;
 
     cout << "\nPair a" << endl;
     a.Read();
@@ -16,17 +18,20 @@ int main()
 
     cout << "\nPair c" << endl;
     c.Init(1, 2.5);
-    c.toString();
+    cout << c.toString_pair();
 
 
     cout << "\na and b" << endl;
-    f.ComparePairs(a, b);
+    result = f.ComparePairs(a, b);
+    f.ComparePairsResult(result);
 
     cout << "\na and c" << endl;
-    f.ComparePairs(a, c);
+    result = f.ComparePairs(a, c);
+    f.ComparePairsResult(result);
 
     cout << "\nb and c" << endl;
-    f.ComparePairs(b, c);
+    result = f.ComparePairs(b, c);
+    f.ComparePairsResult(result);
 
     return 0;
 }
